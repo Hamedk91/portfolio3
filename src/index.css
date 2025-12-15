@@ -1,0 +1,233 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BACKGROUND ANIMÉ ================= */
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #1a1f2e, #2d3748, #1a1f2e);
+  background-size: 400% 400%;
+  animation: gradientFlow 18s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================= GLOBAL ================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 1.9;
+  opacity: 0.85;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ffffff, #f7dc4f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 120px 40px;
+  text-align: center;
+}
+
+/* ================= PROJECTS GRID ================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.project-card {
+  height: 380px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  border-color: rgba(247,220,79,0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+}
+
+/* ================= MODAL ================= */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.modal-content {
+  background: rgba(26,31,46,0.97);
+  border-radius: 16px;
+  max-width: 1000px;
+  width: 92%;
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 40px;
+  position: relative;
+}
+
+/* ================= CLOSE BUTTON ================= */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: #f7dc4f;
+  cursor: pointer;
+}
+
+/* ================= MODAL BODY ================= */
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* ================= VIDEO BLOCK ================= */
+.modal-video {
+  background: rgba(255,255,255,0.04);
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.video-player {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* ================= VIDEO TITLE ================= */
+.video-name {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(247,220,79,0.15);
+  color: #f7dc4f;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ================= VIDEO NAV ================= */
+.video-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.video-navigation button {
+  background: transparent;
+  border: 1px solid rgba(247,220,79,0.4);
+  color: #f7dc4f;
+  padding: 10px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.video-navigation button:hover {
+  background: #f7dc4f;
+  color: #1a1f2e;
+}
+
+/* ================= THUMBNAILS ================= */
+.video-thumbnails {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.video-thumbnails img {
+  width: 70px;
+  height: 45px;
+  border-radius: 6px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.video-thumbnails img.active-thumb {
+  opacity: 1;
+  outline: 2px solid #f7dc4f;
+}
+
+/* ================= DESCRIPTION BLOCK ================= */
+.modal-description {
+  text-align: left;
+  padding-top: 10px;
+}
+
+.modal-description h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.modal-description p {
+  font-size: 1.05rem;
+  line-height: 2;
+  opacity: 0.9;
+  max-width: 420px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .modal-body {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    padding: 25px;
+  }
+
+  .modal-description p {
+    max-width: 100%;
+  }
+}

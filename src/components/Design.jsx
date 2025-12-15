@@ -3,7 +3,7 @@ export default function Design() {
     "/images/Timberland1 .png",
     "/images/Timberland2.png",
     "/images/Timberland3.png",
-    "/images/Timberland1 .png",
+    "/images/Timberland1.png",
     "/images/Timberland2.png",
     "/images/Timberland3.png",
   ];

@@ -10,10 +10,8 @@ export default function Design() {
 
   return (
     <section id="design" className="section">
-      <h2>Design & Affiches</h2>
-      <p className="design-hint">
-        Défilement continu – inspiration galerie
-      </p>
+      
+      
 
       <div className="marquee">
         <div className="marquee-track">

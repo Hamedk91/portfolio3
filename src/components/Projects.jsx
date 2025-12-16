@@ -17,7 +17,7 @@ export default function Projects() {
         { src: "/video/wordpress_4.mp4", name: "" },
       ],
       description:
-        "Développement d'un site vitrine pour l'entreprise Konaté Adhésif. Gestion complète du projet : création de la maquette sur Figma, intégration WordPress, mise en place d'un formulaire de contact fonctionnel et optimisation SEO.",
+        "La création du site WordPress a été un projet collaboratif mené à bien en duo. L’objectif était de définir un concept pertinent, puis de réaliser un site vitrine accordé à ce concept. La vidéo présente la page d'accueil. Nous avons créé une page regroupant toutes les collaborations réalisées entre différentes marques du secteur de la mode (les meilleurs collabs), une page dédiée aux meilleures collaborations et une page mettant en avant les collaborations improbables, comme par exemple celle entre Cars et Crocs. La page Contact permet aux utilisateurs de contacter les créateurs.",
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export default function Projects() {
       image: "/images/projet_aviation.png",
       videos: [{ src: "/video/site_avion.mp4", name: "Page d'accueil" }],
       description:
-        "Refonte complète d'un site web d'aviation existant. Modernisation de l'interface avec HTML5, CSS3 et Bootstrap. Amélioration de l'expérience utilisateur avec une navigation fluide et un design moderne.",
+        "L’objectif de ce projet était de réaliser la refonte d’un site web consacré à l’aviation afin de le moderniser et de l’adapter aux standards actuels du web. Le site devait être plus attractif, dynamique et agréable à utiliser. Nous avons utilisé HTML et CSS pour structurer et styliser le contenu, ainsi que Bootstrap pour améliorer l’ergonomie, la mise en page et la compatibilité sur ordinateurs, tablettes et smartphones.",
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ export default function Projects() {
         { src: "/video/aesy2drive_test.mp4", name: "Test" },
       ],
       description:
-        "Développement d'une plateforme web complète reliant auto-écoles et élèves. Technologies : Angular (front), PHP (back). Fonctionnalités : système de gestion des notes, tableau de bord pour les élèves, interface d'administration pour les auto-écoles.",
+        "Pour cette SAE, nous avons développé une plateforme visant à établir un lien entre les auto-écoles et les élèves. L’outil optimise l’interaction entre les deux parties. La gestion est assurée par un administrateur supervisant les activités. Les auto-écoles peuvent ajouter, modifier ou supprimer les notes des élèves, tandis que ces derniers peuvent visualiser leurs résultats directement sur la plateforme. Technologies : Angular, MySQL, TypeScript.",
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ export default function Projects() {
       image: "/images/projet_pesticide.png",
       videos: [{ src: "/video/site_pesticide.mp4", name: "Visualisation des données" }],
       description:
-        "Création d'un site web permettant d'exploiter et visualiser des données sur les pesticides. Utilisation de Chart.js et D3.js pour créer des graphiques interactifs. Interface intuitive pour analyse rapide des données.",
+        "L’objectif était de créer un site web permettant aux professionnels d’exploiter les données afin de prendre les meilleures décisions concernant le choix des pesticides selon le type de légume. Les informations sont présentées sous forme de graphiques réalisés avec Chart.js et D3.js. La principale difficulté a été la prise en main de D3.js, que nous n’avions jamais utilisé auparavant, nécessitant un temps d’apprentissage pour bien comprendre son fonctionnement. Technologies : JavaScript, HTML, CSS, D3.js, Chart.js.",
     },
   ];
 
@@ -147,13 +147,12 @@ export default function Projects() {
                     </div>
                   )}
 
-                  {/* MINIATURES */}
                   {selectedProject.videos.length > 1 && (
                     <div className="video-thumbnails">
                       {selectedProject.videos.map((video, index) => (
                         <img
                           key={index}
-                          src="/images/video_placeholder.png" // mettre de vraies miniatures si dispo
+                          src="/images/video_placeholder.png"
                           alt={video.name}
                           className={currentVideoIndex === index ? "active-thumb" : ""}
                           onClick={() => setCurrentVideoIndex(index)}

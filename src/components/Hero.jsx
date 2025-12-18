@@ -61,7 +61,24 @@ export default function Hero() {
         </p>
       </div>
 
-      <div className="hero-img-placeholder">👤</div>
+      {/* PHOTO — PAS DE TEXTE */}
+      <motion.div
+        className="hero-img-placeholder"
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <img
+          src="./images/hk.jpg"   // 🔴 le fichier DOIT être dans /public
+          alt="Hamed Konaté"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            borderRadius: "50%"
+          }}
+        />
+      </motion.div>
     </section>
   );
 }

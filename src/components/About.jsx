@@ -1,12 +1,5 @@
 import { motion } from "framer-motion";
 
-const stats = [
-  { num: "4+",   label: "Projets réalisés"    },
-  { num: "2+",   label: "Années en MMI"       },
-  { num: "12+",  label: "Technologies"        },
-  { num: "100%", label: "Motivé & disponible" },
-];
-
 export default function About() {
   return (
     <section id="about" className="about-section">
@@ -35,7 +28,7 @@ export default function About() {
       {/* ── GRID ──────────────────────────────────────── */}
       <div className="about-grid">
 
-        {/* TEXT + STATS */}
+        {/* TEXT */}
         <motion.div
           className="about-text"
           initial={{ opacity: 0, x: -30 }}
@@ -55,18 +48,8 @@ export default function About() {
             perfectionner mes compétences techniques et contribuer à des projets concrets.
           </p>
 
-          {/* Stats */}
-          <div className="about-stats">
-            {stats.map((s) => (
-              <div className="stat-box" key={s.label}>
-                <div className="num">{s.num}</div>
-                <div className="label">{s.label}</div>
-              </div>
-            ))}
-          </div>
-
           <a
-            href="./images/CV hamed_konate.pdf"
+            href="./images/cv_hamed_konate.pdf"
             className="btn-gold"
             target="_blank"
             rel="noreferrer"
@@ -76,7 +59,7 @@ export default function About() {
           </a>
         </motion.div>
 
-        {/* PHOTO */}
+        {/* PLACEHOLDER HK */}
         <motion.div
           className="about-visual"
           initial={{ opacity: 0, x: 30 }}
